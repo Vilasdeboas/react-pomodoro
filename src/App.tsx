@@ -1,5 +1,6 @@
 import { Container } from './components/Container';
 import { Countdown } from './components/Countdown';
+import { Form } from './components/Form';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import './styles/global.css';
@@ -22,7 +23,9 @@ function App() {
                 <Countdown />
             </Container>
 
-            <Container>FOOTER</Container>
+            <Container>
+                <Form />
+            </Container>
         </>
     );
 }
