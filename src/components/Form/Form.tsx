@@ -4,7 +4,12 @@ import styles from './styles.module.css';
 export function Form() {
     return (
         <form className={styles.form} action=''>
-            <DefaultInput type='text' labelText='Task' id='taskInput' />
+            <DefaultInput
+                type='text'
+                labelText='Task'
+                id='taskInput'
+                placeholder='Digite algo'
+            />
             <div className={styles.formRow}>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>

@@ -13,8 +13,8 @@ export function DefaultInput({
 }: DefaultInputProps) {
     return (
         <div className={styles.formRow}>
-            {labelText && <label htmlFor={id}>{labelText}</label>}
-            <input id={id} type={type} {...rest} />
+            <label htmlFor={id}>{labelText}</label>
+            <input className={styles.input} id={id} type={type} {...rest} />
         </div>
     );
 }
