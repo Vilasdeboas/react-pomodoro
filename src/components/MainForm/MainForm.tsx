@@ -4,9 +4,9 @@ import { DefaultButton } from '../DefaultButton';
 import { DefaultInput } from '../DefaultInput';
 import styles from './styles.module.css';
 
-export function Form() {
+export function MainForm() {
     return (
-        <form className={styles.form} action=''>
+        <form className={styles.mainForm} action=''>
             <DefaultInput
                 type='text'
                 labelText='Task'
