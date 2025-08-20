@@ -8,8 +8,6 @@ import './styles/global.css';
 import './styles/theme.css';
 
 function App() {
-    //console.log('Hello World!');
-
     return (
         <>
             <Container>
