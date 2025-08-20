@@ -1,5 +1,6 @@
 import { Container } from './components/Container';
 import { Countdown } from './components/Countdown';
+import { Footer } from './components/Footer/Footer';
 import { Form } from './components/Form';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
@@ -25,6 +26,10 @@ function App() {
 
             <Container>
                 <Form />
+            </Container>
+
+            <Container>
+                <Footer />
             </Container>
         </>
     );
