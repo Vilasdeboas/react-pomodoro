@@ -13,6 +13,10 @@ export function MainForm() {
                 id='taskInput'
                 placeholder='Digite algo'
             />
+            <div className='formRow'>
+                <p>Próximo intervalo é de X min</p>
+            </div>
+
             <div className={styles.formRow}>
                 <Cycles />
             </div>
