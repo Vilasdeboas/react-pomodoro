@@ -1,17 +1,32 @@
-import { PlayCircleIcon, PlayIcon } from 'lucide-react';
+import { PlayCircleIcon } from 'lucide-react';
 import { Cycles } from '../Cycles';
 import { DefaultButton } from '../DefaultButton';
 import { DefaultInput } from '../DefaultInput';
 import styles from './styles.module.css';
+import { useRef, useState } from 'react';
 
 export function MainForm() {
+    const [taskName, setTaskName] = useState('');
+    const taskNameInput = useRef<HTMLInputElement>(null);
+
+    function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+    }
+
     return (
-        <form className={styles.mainForm} action=''>
+        <form
+            onSubmit={handleCreateNewTask}
+            className={styles.mainForm}
+            action=''
+        >
             <DefaultInput
+                id='taskInput'
                 type='text'
                 labelText='Task'
-                id='taskInput'
                 placeholder='Digite algo'
+                //onChange={e => setTaskName(e.target.value)}
+                //value={taskName}
+                ref={taskNameInput}
             />
             <div className='formRow'>
                 <p>Próximo intervalo é de X min</p>
