@@ -71,6 +71,7 @@ export function MainForm() {
                 //onChange={e => setTaskName(e.target.value)}
                 //value={taskName}
                 ref={taskNameInput}
+                disabled={!!state.activeTask}
             />
             <div className='formRow'>
                 <p>Próximo intervalo é de X min</p>
