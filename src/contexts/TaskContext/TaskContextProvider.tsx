@@ -9,10 +9,6 @@ type TaskContextProviderProps = {
 export function TaskContextProvider({ children }: TaskContextProviderProps) {
     const [state, setState] = useState(initialTaskState);
 
-    useEffect(() => {
-        console.log('Mudou: ', state);
-    }, [state]);
-
     return (
         <TaskContext.Provider value={{ state, setState }}>
             {children}
