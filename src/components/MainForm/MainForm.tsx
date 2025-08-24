@@ -3,13 +3,13 @@ import { Cycles } from '../Cycles';
 import { DefaultButton } from '../DefaultButton';
 import { DefaultInput } from '../DefaultInput';
 import styles from './styles.module.css';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import type { TaskModel } from '../../models/TaskModel';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import { getNextCycle } from '../../utils/getNextCycle';
 import { getNextCycleType } from '../../utils/getNextCycleType';
-import { formatSecondsToMinutes } from '../../utils/formatSecondsToMinutes';
 import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
+import { Tips } from '../Tips';
 
 export function MainForm() {
     //const [taskName, setTaskName] = useState('');
@@ -47,22 +47,6 @@ export function MainForm() {
     }
 
     function interruptTask() {
-        /*setState(prevState => {
-            return {
-                ...prevState,
-                activeTask: null,
-                secondsRemaining: 0,
-                formattedSecondsRemaining: '00:00',
-                tasks: [
-                    ...prevState.tasks.map(task => {
-                        if (prevState.activeTask?.id === task.id) {
-                            return { ...task, interruptDate: Date.now() };
-                        }
-                        return task;
-                    })
-                ]
-            };
-        });*/
         dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
     }
 
@@ -83,7 +67,7 @@ export function MainForm() {
                 disabled={!!state.activeTask}
             />
             <div className='formRow'>
-                <p>Próximo intervalo é de X min</p>
+                <Tips />
             </div>
 
             {state.currentCycle > 0 && (
