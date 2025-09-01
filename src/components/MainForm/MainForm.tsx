@@ -10,7 +10,6 @@ import { getNextCycle } from '../../utils/getNextCycle';
 import { getNextCycleType } from '../../utils/getNextCycleType';
 import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 import { Tips } from '../Tips';
-import { toast } from 'react-toastify';
 import { showMessage } from '../../adapters/showMessage';
 
 export function MainForm() {
