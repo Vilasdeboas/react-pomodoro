@@ -42,7 +42,7 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
         } else {
             playBeepRef.current = null;
         }
-
+        document.title = `${state.formattedSecondsRemaining} - Chronos Pomodoro`;
         worker.postMessage(state);
     }, [worker, state]);
 
